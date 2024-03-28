@@ -61,3 +61,14 @@ Once you've edited your file, you're ready to publish it as a live page.
 3. Your precise URL will depend on what you've named your repository and your username. You can find it by going back to your repository's main page (click "Code" at the top of the page) and scrolling down. In the right-hand column, there should be a section called "Deployments" with "github-pages" underneath it. Click on "github-pages" to access the link to your site.
 
 It might take a minute or two to show up, and changes you make to your spreadsheet might also take a couple minutes to reflect on the map. Be patient, but if you run into issues, please feel free to reach out. There are also lots of good tutorials on GitHub Pages and on Leaflet if you want to go deeper. 
+
+# Related Readings
+
+Here are some readings that I assigned prior to this assignment:
+
+- Katie Rawson and Trevor Muñoz, "Against Cleaning," in Matthew K. Gold and Lauren F. Klein, *Debates in the Digital Humanities 2019* (University of Minnesota Press, 2019): 279-292, https://dhdebates.gc.cuny.edu/read/4805e692-0823-4073-b431-5a684250a82d/section/07154de9-4903-428e-9c61-7a92a6f22e51#ch23.
+- Vivien Marx, "Data visualization: ambiguity as a fellow traveler," *Nature Methods* 10, no. 7 (2013): 613-615, https://www.nature.com/articles/nmeth.2530.
+- Jeffrey Mervis, "Why null results rarely see the light of day," *Science* 345, no. 6200 (2014): 992, https://www.science.org/doi/10.1126/science.345.6200.992.
+- Miriam Posner, "What's Next: The Radical, Unrealized Potential of Digital Humanities," in Matthew K. Gold and Lauren F. Klein, *Debates in the Digital Humanities 2016* (University of Minnesota Press, 2016): 32-41, https://dhdebates.gc.cuny.edu/read/untitled/section/a22aca14-0eb0-4cc6-a622-6fee9428a357.
+
+There are lots of other great readings on critical data studies and data practices in digital humanities and beyond - please reach out if you'd like recommendations!
