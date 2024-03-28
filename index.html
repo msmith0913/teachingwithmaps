@@ -57,7 +57,7 @@ If you want to change the information displayed in the popup, the easiest way is
 		L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=4CI3hvSGGwgJXODif6KH', {attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
 		}).addTo(map);
 
-		omnivore.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQSlXZ70TEvQayjFSFFSFTRGRYPgfmVEium7fBhVm01qLC4MWOIoCBwlwcyvVehyolCNnJYWUZFXz8i/pub?output=csv')
+		omnivore.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSEMGVvwEoFWEbhVCE_FJRrquKaOmXAm20ny3R8ZH0QvjIOHW7HWCDyWYaTPGMBUNPlua5nRQTCgpAI/pub?output=csv')
 		.on('ready', function(layer) {
 			this.eachLayer(function(marker) {
 				marker.bindPopup("<b>Location:</b> " + marker.toGeoJSON().properties.site_name + "</br><b>Description: </b>" + marker.toGeoJSON().properties.site_description + "</br><b>Contributed by: </b>" + marker.toGeoJSON().properties.contributor);
