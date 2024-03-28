@@ -20,4 +20,23 @@ This activity helps them to think about where data comes from, how it's shaped b
 
 # The Technical Details
 
-I've set this up to hopefully have as low a technical barrier as possible. 
+You can use this repository in two ways:
+
+1. If you have hosting available through your institution or a service like Reclaim Hosting, you can just download the index.html file, replace the link to the spreadsheet with your own, and upload it to your own server.
+
+2. If you don't have hosting available, you can use GitHub to create your map page.
+
+## Editing the Map
+
+1. In the top right corner of this page, you should see a green button that says "Use this template." Click it and select the option that says "Create a new repository." Follow the prompts to create your repository. You can name it whatever you'd like. You can choose either privacy setting (although the map page you will create will be publicly accessible either way!).
+
+2. Once your repository is created, click into the index.html file. In the top right of the box with all the code in it, click the pencil icon to edit the code.
+   
+3. The code has comments (contained in <!-- --> brackets) that indicate areas for you to customize. They're not always super visible, so here are the key areas:
+   A. The meta tags: These aren't essential, and the info you add here won't be visible to sighted users on your page. The meta tags are there for accessibility and discoverability - they're what search engines use to provide information about the site in search results.
+   B. The title tag: This is what will show up in the top bar of your site. Also not essential, it just makes it look a little more polished.
+   C. The h1 tag: This is what displays as the main header text on your page.
+   D. The center coordinates: This is point that your map centers on.
+   E. The zoom level: This is how close you want your map to zoom in by default. Bigger numbers are more zoomed in.
+   F. The spreadsheet: After omnivore.csv, you'll see a set of single quotation marks with a link to a Google spreadsheet. This is where you'll link your spreadsheet. NOTE: This is not the share link from your document. In your Google sheet, go to File > Share > Publish to web. Change the format from Web page to CSV and hit publish. That's the link you'll use here.
+   G. The pop-up content: Currently, the map is set up to display a pop up when you click on a location. That popup will include the name of the location, a description, and the contributor, all pulled from the spreadsheet. If you want to change the information displayed in the popup, the easiest way is to copy and paste one of the existing lines and edit it. The text in the <b> tags will show up as the label, and the marker.toGeoJSON().properties. autopopulates from the given column in your spreadsheet. 
