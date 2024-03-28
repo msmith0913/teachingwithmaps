@@ -33,10 +33,31 @@ You can use this repository in two ways:
 2. Once your repository is created, click into the index.html file. In the top right of the box with all the code in it, click the pencil icon to edit the code.
    
 3. The code has comments (contained in <!-- --> brackets) that indicate areas for you to customize. They're not always super visible, so here are the key areas:
+   
    A. The meta tags: These aren't essential, and the info you add here won't be visible to sighted users on your page. The meta tags are there for accessibility and discoverability - they're what search engines use to provide information about the site in search results.
+   
    B. The title tag: This is what will show up in the top bar of your site. Also not essential, it just makes it look a little more polished.
+   
    C. The h1 tag: This is what displays as the main header text on your page.
+
    D. The center coordinates: This is point that your map centers on.
+   
    E. The zoom level: This is how close you want your map to zoom in by default. Bigger numbers are more zoomed in.
+   
    F. The spreadsheet: After omnivore.csv, you'll see a set of single quotation marks with a link to a Google spreadsheet. This is where you'll link your spreadsheet. NOTE: This is not the share link from your document. In your Google sheet, go to File > Share > Publish to web. Change the format from Web page to CSV and hit publish. That's the link you'll use here.
-   G. The pop-up content: Currently, the map is set up to display a pop up when you click on a location. That popup will include the name of the location, a description, and the contributor, all pulled from the spreadsheet. If you want to change the information displayed in the popup, the easiest way is to copy and paste one of the existing lines and edit it. The text in the <b> tags will show up as the label, and the marker.toGeoJSON().properties. autopopulates from the given column in your spreadsheet. 
+   
+   G. The pop-up content: Currently, the map is set up to display a pop up when you click on a location. That popup will include the name of the location, a description, and the contributor, all pulled from the spreadsheet. If you want to change the information displayed in the popup, the easiest way is to copy and paste one of the existing lines and edit it. The text in the bold tags will show up as the label, and the marker.toGeoJSON().properties. autopopulates from the given column in your spreadsheet.
+
+4. Once you've got your edits made, hit the green "Commit changes" button. (Make sure you hit it in the pop-up as well.)
+
+## Creating Your GitHub Pages Site
+
+Once you've edited your file, you're ready to publish it as a live page.
+
+1. Go up to Settings at the top of your repository. In the left-hand menu, select Pages.
+   
+2. In the dropdown under Branch, change "None" to "main" and hit Save.
+
+3. Your precise URL will depend on what you've named your repository and your username. You can find it by going back to your repository's main page (click "Code" at the top of the page) and scrolling down. In the right-hand column, there should be a section called "Deployments" with "github-pages" underneath it. Click on "github-pages" to access the link to your site.
+
+It might take a minute or two to show up, and changes you make to your spreadsheet might also take a couple minutes to reflect on the map. Be patient, but if you run into issues, please feel free to reach out. There are also lots of good tutorials on GitHub Pages and on Leaflet if you want to go deeper. 
