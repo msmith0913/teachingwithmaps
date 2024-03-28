@@ -1,6 +1,6 @@
 # Teaching with Maps
 
-This repository contains a mapping classroom activity. It was designed for a college digital humanities course, but it has applications across a variety of humanities and data-oriented courses. Feel free to adapt and circulate! The live version of the template is here: https://msmith0913.github.io/teachingwithmaps/
+This repository contains a mapping classroom activity. It was designed for a college digital humanities course, but it has applications across a variety of humanities and data-oriented courses. The goal is for students to think about data cleaning from the machine perspective (ensuring our data is computationally viable) and from the humanistic perspective (interrogating how our data practices shape our outcomes). Feel free to adapt and circulate! The live version of the template is here: https://msmith0913.github.io/teachingwithmaps/
 
 # The Activity
 
