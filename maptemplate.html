@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<!-- Once you've tailored this to your needs, upload it to any hosting service.-->
+<html>
+<head>
+	  <link rel="stylesheet" href="https://submissionstrategies.com/css/r2.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+	 <link rel="stylesheet" href="https://submissionstrategies.com/css/L.Control.Layers.Tree.css"/>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js"></script>
+<!-- Most of the styling of the site is determined by the stylesheets linked at the top. But if you'd like to change the size of the map on the page, you can do so here. The height is set to 600px, and the width is 80% of your page (which means it changes depending on your screen size - good for students using phones or tablets!).-->
+<style>
+		#map {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 80%;
+			height: 600px;
+		}
+	</style>
+	<meta charset="UTF-8">
+    <!-- These meta tags are for accessibility and search engine purposes. They won't show for sighted readers on the page, but they will help search engines like Google index the page. -->
+	<!-- <meta name="title" content=""> -->
+	<!-- <meta name="description" content=""> -->
+	<!-- <meta name="author" content=""> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This <title> tag is what will show up in the top bar of your website. -->
+	<title>Site Title</title>
+</head>
+<body>
+    <!-- This script is what allows Leaflet to read your Google sheet. -->
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+
+	<!-- This <h1> tag is what will display as your header in your site's content. -->
+    <h1>Project Title</h1>
+
+<div style="margin: auto" id = "map"></div>
+<!-- To change the center of your maps, grab coordinates from Google Maps by right-clicking on your desired location, and paste them in here.-->
+<!-- To zoom in closer to your center point, increase the zoom level. To widen your view, decrease it. -->
+<!-- To point the map at your spreadsheet:
+1. In your Google sheet, Go to File > Share > Publish to Web. Make sure you change the format from Web page to CSV.
+2. Once you hit Publish, copy and the paste the link below, inside the quotation marks: omnivore.csv('your_link_here') 
+3. Currently, the map is set up to display a pop up when you click on a location. That popup will include the name of the location, a description, and the contributor, all pulled from the spreadsheet.
+If you want to change the information displayed in the popup, the easiest way is to copy and paste one of the existing lines and edit it. The text in the <b> tags will show up as the label, and the marker.toGeoJSON().properties. autopopulates from the given column in your spreadsheet.-->
+	<script>
+		var map = L.map('map', {
+			center: [38.62718883493524, -90.17973025660817],
+			zoom: 9
+		});
+
+		L.tileLayer('https://api.maptiler.com/maps/topo/{z}/{x}/{y}.png?key=4CI3hvSGGwgJXODif6KH', {attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+		}).addTo(map);
+
+		omnivore.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQSlXZ70TEvQayjFSFFSFTRGRYPgfmVEium7fBhVm01qLC4MWOIoCBwlwcyvVehyolCNnJYWUZFXz8i/pub?output=csv')
+		.on('ready', function(layer) {
+			this.eachLayer(function(marker) {
+				marker.bindPopup("<b>Location:</b> " + marker.toGeoJSON().properties.site_name + "</br><b>Description: </b>" + marker.toGeoJSON().properties.site_description + "</br><b>Contributed by: </b>" + marker.toGeoJSON().properties.contributor);
+		});
+	})
+	.addTo(map);
+
+	</script>
+
+</script>
+</body>
