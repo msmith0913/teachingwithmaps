@@ -31,9 +31,11 @@ You can use this repository in two ways:
 
 1. In the top right corner of this page, you should see a green button that says "Use this template." Click it and select the option that says "Create a new repository." Follow the prompts to create your repository. You can name it whatever you'd like, and choose the Public privacy setting.
 
-2. Once your repository is created, click into the index.html file. In the top right of the box with all the code in it, click the pencil icon to edit the code.
+2. Make a copy of the spreadsheet: https://docs.google.com/spreadsheets/d/1SUfcfBPWb5V2ff3-Yd2YvLMl_T5xZBbtdAMoQn4Az0c/edit?usp=sharing
+
+3. Once your repository is created, click into the index.html file. In the top right of the box with all the code in it, click the pencil icon to edit the code.
    
-3. The code has comments (contained in <!-- --> brackets) that indicate areas for you to customize. They're not always super visible, so here are the key areas:
+4. The code has comments (contained in <!-- --> brackets) that indicate areas for you to customize. They're not always super visible, so here are the key areas:
    
    A. The meta tags: The info you add here won't be visible to sighted users on your page. The meta tags are there for accessibility and discoverability - they're what search engines use to provide information about the site in search results.
    
@@ -49,7 +51,7 @@ You can use this repository in two ways:
    
    G. The pop-up content: Currently, the map is set up to display a pop up when you click on a location. That popup will include the name of the location, a description, and the contributor, all pulled from the spreadsheet. If you want to change the information displayed in the popup, the easiest way is to copy and paste one of the existing lines and edit it with the title of the column you want to include. The text in the bold tags will show up as the label, and the marker.toGeoJSON().properties. autopopulates from the given column in your spreadsheet.
 
-4. Once you've got your edits made, hit the green "Commit changes" button. (Make sure you hit it in the pop-up as well.)
+5. Once you've got your edits made, hit the green "Commit changes" button. (Make sure you hit it in the pop-up as well.)
 
 ## Creating Your GitHub Pages Site
 
@@ -61,7 +63,7 @@ Once you've edited your file, you're ready to publish it as a live page.
 
 3. Your precise URL will depend on what you've named your repository and your username. You can find it by going back to your repository's main page (click "Code" at the top of the page) and scrolling down. In the right-hand column, there should be a section called "Deployments" with "github-pages" underneath it. Click on "github-pages" to access the link to your site.
 
-It might take a minute or two to show up, and changes you make to your spreadsheet might also take a couple minutes to reflect on the map. Be patient, but if you run into issues, please feel free to reach out. There are also lots of good tutorials on GitHub Pages and on Leaflet if you want to go deeper. 
+It might take a minute or two to show up, and changes you make to your code might also take a couple minutes to reflect on the map. When you add or update data in your spreadsheet, that generally reflects on the map immediately but will require you to refresh your browser. Be patient, but if you run into issues, please feel free to reach out. There are also lots of good tutorials on GitHub Pages and on Leaflet if you want to go deeper. 
 
 # Related Readings
 
